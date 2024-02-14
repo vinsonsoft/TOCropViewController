@@ -504,7 +504,10 @@
 + (UIImage *)rotateCCWImage
 {
     if (@available(iOS 13.0, *)) {
-        return [[UIImage imageNamed:@"ic_rotate_left"]
+        
+        return [[UIImage imageNamed:@"ic_rotate_left"
+                                         inBundle:[NSBundle bundleForClass:self.class]
+                    compatibleWithTraitCollection:nil]
                 imageWithBaselineOffsetFromBottom:4];
     }
 
@@ -546,7 +549,9 @@
 + (UIImage *)rotateCWImage
 {
     if (@available(iOS 13.0, *)) {
-        return [[UIImage imageNamed:@"ic_rotate_right"]
+        return [[UIImage imageNamed:@"ic_rotate_right"
+                           inBundle:[NSBundle bundleForClass:self.class]
+      compatibleWithTraitCollection:nil]
                 imageWithBaselineOffsetFromBottom:4];
     }
 

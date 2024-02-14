@@ -22,9 +22,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TOCropViewConstants.h"
-#import "TOCropView.h"
-#import "TOCropToolbar.h"
+#import <TOCropViewConstants.h>
+#import <TOCropView.h>
+#import <TOCropToolbar.h>
+#import "TOCropTopToolbar.h"
 
 @class TOCropViewController;
 
@@ -134,7 +135,9 @@
 /**
  The toolbar view managed by this view controller.
  */
-@property (nonnull, nonatomic, strong, readonly) TOCropToolbar *toolbar;
+@property (nonnull, nonatomic, strong, readonly) TOCropToolbar *bottomToolbar;
+@property (nonnull, nonatomic, strong, readonly) TOCropTopToolbar *topToolbar;
+
 
 /**
  The cropping style of this particular crop view controller

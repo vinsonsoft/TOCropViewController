@@ -378,8 +378,8 @@ open class CropViewController: UIViewController, TOCropViewControllerDelegate {
     /**
      The toolbar managed by this view controller.
      */
-    public var toolbar: TOCropToolbar {
-        return toCropViewController.toolbar
+    public var topToolbar: TOCropTopToolbar {
+        return toCropViewController.topToolbar
     }
 
     /*

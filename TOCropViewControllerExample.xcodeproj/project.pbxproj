@@ -440,7 +440,6 @@
 			children = (
 				2238CF341FC027550081B957 /* CropViewController */,
 				2238CF211FC0269C0081B957 /* CropViewControllerExample */,
-				DB95A15E2B7C45A200F77D6F /* images.xcassets */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -448,6 +447,7 @@
 		2238CF341FC027550081B957 /* CropViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DB95A15E2B7C45A200F77D6F /* images.xcassets */,
 				2238CF351FC029880081B957 /* CropViewController.swift */,
 				2238CF3E1FC029A90081B957 /* CropViewController.h */,
 				2238CF3F1FC029A90081B957 /* Info.plist */,

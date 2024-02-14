@@ -317,6 +317,7 @@
 		220C8EA021062E6D00A9B25D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DB95A15E2B7C45A200F77D6F /* images.xcassets */,
 				22C3C5491AC8CA0D00E86280 /* TOCropViewControllerLocalizable.strings */,
 			);
 			path = Resources;
@@ -447,7 +448,6 @@
 		2238CF341FC027550081B957 /* CropViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DB95A15E2B7C45A200F77D6F /* images.xcassets */,
 				2238CF351FC029880081B957 /* CropViewController.swift */,
 				2238CF3E1FC029A90081B957 /* CropViewController.h */,
 				2238CF3F1FC029A90081B957 /* Info.plist */,

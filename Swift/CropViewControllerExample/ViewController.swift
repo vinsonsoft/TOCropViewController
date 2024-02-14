@@ -24,6 +24,7 @@ class ViewController: UIViewController, CropViewControllerDelegate, UIImagePicke
         let cropController = CropViewController(croppingStyle: croppingStyle, image: image)
         //cropController.modalPresentationStyle = .fullScreen
         cropController.delegate = self
+        cropController.aspectRatioPickerButtonHidden = true
         
         // Uncomment this if you wish to provide extra instructions via a title label
         //cropController.title = "Crop Image"

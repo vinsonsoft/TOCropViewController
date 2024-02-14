@@ -155,11 +155,13 @@
     BOOL verticalLayout = (CGRectGetWidth(self.bounds) < CGRectGetHeight(self.bounds));
     CGSize boundsSize = self.bounds.size;
     
-    self.cancelIconButton.hidden = self.cancelButtonHidden || (_showOnlyIcons ? false : !verticalLayout);
-    self.cancelTextButton.hidden = self.cancelButtonHidden || (_showOnlyIcons ? true : verticalLayout);
-    self.doneIconButton.hidden   = self.doneButtonHidden || (_showOnlyIcons ? false : !verticalLayout);
-    self.doneTextButton.hidden   = self.doneButtonHidden || (_showOnlyIcons ? true : verticalLayout);
-
+    self.cancelIconButton.hidden = true;
+    self.cancelTextButton.hidden = true;
+    self.doneIconButton.hidden   = true;
+    self.doneTextButton.hidden   = true;
+    self.clampButton.hidden = true;
+    self.resetButton.hidden = true;
+    
     CGRect frame = self.bounds;
     frame.origin.x -= self.backgroundViewOutsets.left;
     frame.size.width += self.backgroundViewOutsets.left;
@@ -383,22 +385,6 @@
     self.resetButton.enabled = resetButtonEnabled;
 }
 
-- (void)setDoneButtonHidden:(BOOL)doneButtonHidden {
-    if (_doneButtonHidden == doneButtonHidden)
-        return;
-    
-    _doneButtonHidden = doneButtonHidden;
-    [self setNeedsLayout];
-}
-
-- (void)setCancelButtonHidden:(BOOL)cancelButtonHidden {
-    if (_cancelButtonHidden == cancelButtonHidden)
-        return;
-    
-    _cancelButtonHidden = cancelButtonHidden;
-    [self setNeedsLayout];
-}
-
 - (CGRect)doneButtonFrame
 {
     if (self.doneIconButton.hidden == NO)
@@ -518,8 +504,7 @@
 + (UIImage *)rotateCCWImage
 {
     if (@available(iOS 13.0, *)) {
-        return [[UIImage systemImageNamed:@"rotate.left.fill"
-                        withConfiguration:[UIImageSymbolConfiguration configurationWithWeight:UIImageSymbolWeightSemibold]]
+        return [[UIImage imageNamed:@"ic_rotate_left"]
                 imageWithBaselineOffsetFromBottom:4];
     }
 
@@ -561,8 +546,7 @@
 + (UIImage *)rotateCWImage
 {
     if (@available(iOS 13.0, *)) {
-        return [[UIImage systemImageNamed:@"rotate.right.fill"
-                        withConfiguration:[UIImageSymbolConfiguration configurationWithWeight:UIImageSymbolWeightSemibold]]
+        return [[UIImage imageNamed:@"ic_rotate_right"]
                 imageWithBaselineOffsetFromBottom:4];
     }
 

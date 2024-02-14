@@ -101,6 +101,11 @@
 		DB95A15B2B7C2B4B00F77D6F /* TOCropTopToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DB95A1552B7C2B4B00F77D6F /* TOCropTopToolbar.m */; };
 		DB95A15C2B7C2B4B00F77D6F /* TOCropTopToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = DB95A1562B7C2B4B00F77D6F /* TOCropTopToolbar.h */; };
 		DB95A15D2B7C2B4B00F77D6F /* TOCropTopToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = DB95A1562B7C2B4B00F77D6F /* TOCropTopToolbar.h */; };
+		DB95A15F2B7C45A200F77D6F /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB95A15E2B7C45A200F77D6F /* images.xcassets */; };
+		DB95A1602B7C45A200F77D6F /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB95A15E2B7C45A200F77D6F /* images.xcassets */; };
+		DB95A1612B7C45A200F77D6F /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB95A15E2B7C45A200F77D6F /* images.xcassets */; };
+		DB95A1622B7C45A200F77D6F /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB95A15E2B7C45A200F77D6F /* images.xcassets */; };
+		DB95A1632B7C45A200F77D6F /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB95A15E2B7C45A200F77D6F /* images.xcassets */; };
 		FE3E0E3A21098448004DAE93 /* TOCropViewConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 220C8E9F21062DD300A9B25D /* TOCropViewConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -224,6 +229,7 @@
 		CDC8C5771C667B9100BB86A4 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
 		DB95A1552B7C2B4B00F77D6F /* TOCropTopToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCropTopToolbar.m; sourceTree = "<group>"; };
 		DB95A1562B7C2B4B00F77D6F /* TOCropTopToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCropTopToolbar.h; sourceTree = "<group>"; };
+		DB95A15E2B7C45A200F77D6F /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		E4C7D121221D7465003F381A /* fa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fa; path = fa.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
 		E4C7D122221D7548003F381A /* fa-IR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fa-IR"; path = "fa-IR.lproj/TOCropViewControllerLocalizable.strings"; sourceTree = "<group>"; };
 		FFD1D3CD24D41CFF00E79B71 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
@@ -434,6 +440,7 @@
 			children = (
 				2238CF341FC027550081B957 /* CropViewController */,
 				2238CF211FC0269C0081B957 /* CropViewControllerExample */,
+				DB95A15E2B7C45A200F77D6F /* images.xcassets */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -736,6 +743,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04262D8620F6F1C600024177 /* TOCropViewControllerLocalizable.strings in Resources */,
+				DB95A1602B7C45A200F77D6F /* images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,6 +762,7 @@
 				2234247E1ABBC0CD00BBC2B1 /* LaunchScreen.xib in Resources */,
 				2234247B1ABBC0CD00BBC2B1 /* Images.xcassets in Resources */,
 				22C3C5471AC8CA0D00E86280 /* TOCropViewControllerLocalizable.strings in Resources */,
+				DB95A1612B7C45A200F77D6F /* images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,6 +774,7 @@
 				2238CF2A1FC0269C0081B957 /* Assets.xcassets in Resources */,
 				2238CF281FC0269C0081B957 /* Main.storyboard in Resources */,
 				220C8EA121062EFC00A9B25D /* TOCropViewControllerLocalizable.strings in Resources */,
+				DB95A1622B7C45A200F77D6F /* images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,6 +783,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04262D8720F6F1D600024177 /* TOCropViewControllerLocalizable.strings in Resources */,
+				DB95A15F2B7C45A200F77D6F /* images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,6 +792,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F5062F51F53E32D00AA9F14 /* Main.storyboard in Resources */,
+				DB95A1632B7C45A200F77D6F /* images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

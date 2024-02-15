@@ -504,11 +504,9 @@
 + (UIImage *)rotateCCWImage
 {
     if (@available(iOS 13.0, *)) {
-        
-        return [[UIImage imageNamed:@"ic_rotate_left"
-                                         inBundle:[NSBundle bundleForClass:self.class]
-                    compatibleWithTraitCollection:nil]
-                imageWithBaselineOffsetFromBottom:4];
+        NSBundle *resourceBundle = TO_CROP_VIEW_RESOURCE_BUNDLE_FOR_OBJECT(self);
+        UIImage *image = [UIImage imageNamed:@"ic_rotate_left" inBundle:resourceBundle withConfiguration:nil];
+        return [image imageWithBaselineOffsetFromBottom:4];
     }
 
     UIImage *rotateImage = nil;
@@ -549,10 +547,9 @@
 + (UIImage *)rotateCWImage
 {
     if (@available(iOS 13.0, *)) {
-        return [[UIImage imageNamed:@"ic_rotate_right"
-                           inBundle:[NSBundle bundleForClass:self.class]
-      compatibleWithTraitCollection:nil]
-                imageWithBaselineOffsetFromBottom:4];
+        NSBundle *resourceBundle = TO_CROP_VIEW_RESOURCE_BUNDLE_FOR_OBJECT(self);
+        UIImage *image = [UIImage imageNamed:@"ic_rotate_right" inBundle:resourceBundle withConfiguration:nil];
+        return [image imageWithBaselineOffsetFromBottom:4];
     }
 
     UIImage *rotateCCWImage = [self.class rotateCCWImage];

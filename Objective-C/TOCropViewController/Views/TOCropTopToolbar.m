@@ -72,7 +72,7 @@
                                                                   resourceBundle,
                                                                   nil)
                      forState:UIControlStateNormal];
-    [_doneTextButton setTitleColor:[UIColor colorWithRed:1.0f green:0.8f blue:0.0f alpha:1.0f] forState:UIControlStateNormal];
+    [_doneTextButton setTitleColor:[UIColor colorWithRed:0.56f green:0.568f blue:0.6f alpha:1.0f] forState:UIControlStateNormal];
     if (@available(iOS 13.0, *)) {
         [_doneTextButton.titleLabel setFont:[UIFont systemFontOfSize:17.0f weight:UIFontWeightMedium]];
     } else {
@@ -99,6 +99,7 @@
                                                                     resourceBundle,
                                                                     nil)
                        forState:UIControlStateNormal];
+    [_cancelTextButton setTitleColor:[UIColor colorWithRed:0.56f green:0.568f blue:0.6f alpha:1.0f] forState:UIControlStateNormal];
     [_cancelTextButton.titleLabel setFont:[UIFont systemFontOfSize:17.0f]];
     [_cancelTextButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [_cancelTextButton sizeToFit];
@@ -283,7 +284,12 @@
 
 - (void)setCancelButtonColor:(UIColor *)cancelButtonColor {
     // Default color is app tint color
+    if (cancelButtonColor == nil) {
+        cancelButtonColor = [UIColor colorWithRed:0.56f green:0.568f blue:0.6f alpha:1.0f];
+    }
+
     if (cancelButtonColor == _cancelButtonColor) { return; }
+    
     _cancelButtonColor = cancelButtonColor;
     [_cancelTextButton setTitleColor:_cancelButtonColor forState:UIControlStateNormal];
     [_cancelIconButton setTintColor:_cancelButtonColor];
@@ -293,7 +299,7 @@
 - (void)setDoneButtonColor:(UIColor *)doneButtonColor {
     // Set the default color when nil is specified
     if (doneButtonColor == nil) {
-        doneButtonColor = [UIColor colorWithRed:1.0f green:0.8f blue:0.0f alpha:1.0f];
+        doneButtonColor = [UIColor colorWithRed:0.98f green:0.337f blue:0.117f alpha:1.0f];
     }
 
     if (doneButtonColor == _doneButtonColor) { return; }

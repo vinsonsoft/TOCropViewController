@@ -298,7 +298,7 @@
         
         for (NSInteger i = 0; i < count; i++) {
             UIButton *button = buttons[i];
-            CGFloat sameOffset = horizontally ? fabs(CGRectGetHeight(containerRect)-CGRectGetHeight(button.bounds)) : fabs(CGRectGetWidth(containerRect)-CGRectGetWidth(button.bounds));
+            CGFloat sameOffset = horizontally ? fabs(CGRectGetHeight(containerRect)-size.height) : fabs(CGRectGetWidth(containerRect)-size.width);
             CGFloat diffOffset = padding + i * (fixedSize + padding);
             CGPoint origin = horizontally ? CGPointMake(diffOffset, sameOffset) : CGPointMake(sameOffset, diffOffset);
             if (horizontally) {

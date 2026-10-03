@@ -1679,7 +1679,16 @@ typedef NS_ENUM(NSInteger, TOCropViewOverlayEdge) {
                 
                 if (!aspectRatioCanSwapDimensions) {
                     //This will animate the aspect ratio back to the desired locked ratio after the image is rotated.
-                    [self setAspectRatio:self.aspectRatio animated:animated];
+                    //Reset the zoom to the minimum afterwards, otherwise the zoom applied by the rotation
+                    //compounds on every rotate since the crop box never swaps dimensions.
+                    [UIView animateWithDuration:0.5f delay:0.0f usingSpringWithDamping:1.0f initialSpringVelocity:0.7f
+                                        options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                        [self setAspectRatio:self.aspectRatio animated:NO];
+                        self.scrollView.zoomScale = self.scrollView.minimumZoomScale;
+                        [self moveCroppedContentToCenterAnimated:NO];
+                        [self captureStateForImageRotation];
+                        [self checkForCanReset];
+                    } completion:nil];
                 }
             }];
         }];
